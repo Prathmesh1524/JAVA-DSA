@@ -81,3 +81,50 @@ public static void main(String[] args) {
 }
 }
 
+
+
+
+
+QUE 3.
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Que3 {
+//  REVERSE TEH ARRAY WITHOUT USING ANOTHER ARRAY.
+// I AM USING TWO POINTER APPORACH TO SOLVE THIS PROBLEM.
+
+static void reverse(int[] arr) {
+    int n = arr.length-1;
+    int left = 0, right = n;
+    while (left < right) {
+        swap(arr,right,left);
+        left++;
+        right--;
+    }
+}
+    static void swap(int []arr,int righ,int left){
+        int temp=arr[left];
+        arr[left]=arr[righ];
+        arr[righ]=temp;
+    }
+    static void print(int []arr){
+        for (int i=0;i< arr.length;i++){
+            System.out.print(" "+arr[i]);
+        }
+        System.out.println();
+    }
+
+        public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the length of Array");
+    int n= sc.nextInt();
+    System.out.println("Enter the Elements in Array ");
+    int []arr=new int[n];
+    for (int i=0;i<n;i++){
+        arr[i]= sc.nextInt();
+    }
+   reverse(arr);
+    print(arr);
+}
+
+}
