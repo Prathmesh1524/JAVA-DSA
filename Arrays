@@ -46,7 +46,7 @@ import java.util.Scanner;
 //
 
 public class Que2 {
-//First We are calculating what is the largest Element in the Array .After we get larget then replace it to min value 
+//FIRST IS AM CACULATING WHAT IS THE LARGEST ELEMENT IN THE ARRAY.AFTER WE GET LARGEST ELEMETNT THEN REPLACE IT TO  MIN VALUE.
 static int largest(int []arr){  
     int max=Integer.MIN_VALUE;
     int n=arr.length;
@@ -57,13 +57,12 @@ static int largest(int []arr){
     }
     return max;
 }
- //Traversing the Array agiant so that we Find Second Largest Element
+ // TRAVERSING THR ARRAY AGIAN SO THAT WE FIND THE SECOND LARGEST ELEMENT 
     static int secmax(int []arr){
         int max=largest(arr);
         for (int i=0;i< arr.length;i++){
             if (arr[i]==max){
-                arr[i]=Integer.MIN_VALUE; // we are storing the minimum value in max value
-
+                arr[i]=Integer.MIN_VALUE; // WE ARE STORING THE MIN VAKUE IN MAX VALUE .
             }
         }
         int secondmax=largest(arr);
